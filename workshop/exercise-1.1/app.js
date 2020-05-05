@@ -13,3 +13,22 @@
 // OPTIONAL
 // Feel free to add some CSS to this once you're done
 // --------------------------------------------------
+
+let result = document.querySelector("#result");
+let restart = document.querySelector("#restart");
+let timer = 0;
+
+let id = setInterval(() => {
+  timer += 1;
+}, 1000);
+
+window.addEventListener("click", youHaveClicked);
+
+function youHaveClicked(event) {
+  if (timer < 1) {
+    result.innerHTML = "you clicked successfully";
+  } else {
+    result.innerHTML = "you failed";
+  }
+  window.removeEventListener("click", youHaveClicked);
+}

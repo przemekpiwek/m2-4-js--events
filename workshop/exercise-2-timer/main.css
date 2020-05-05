@@ -1,0 +1,70 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.timeNow {
+  display: flex;
+  justify-content: center;
+}
+.stopwatch {
+  display: flex;
+  justify-content: space-around;
+}
+
+#stopWatchDisplay {
+  background: darkslategrey;
+  height: 100px;
+  width: 300px;
+  border: 1px steelblue black;
+  border-radius: 2px;
+  color: yellowgreen;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5em;
+  letter-spacing: 10px;
+}
+
+#startButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: greenyellow;
+  border-radius: 50%;
+  width: 100px;
+}
+
+#stopButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(255, 47, 47);
+  border-radius: 50%;
+  width: 100px;
+}
+.timeInput {
+  display: flex;
+  justify-content: space-around;
+}
+
+.countdown {
+}
+.input {
+  height: 50px;
+  width: 200px;
+  font-size: 3em;
+  text-align: center;
+}
+button {
+  width: 200px;
+  border-radius: 5px;
+  font-size: 2em;
+  background: greenyellow;
+  color: green;
+  border: 0px;
+}

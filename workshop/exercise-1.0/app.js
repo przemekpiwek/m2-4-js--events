@@ -11,3 +11,15 @@
 // OPTIONAL
 // Feel free to add some CSS to this once you're done
 // --------------------------------------------------
+
+let body = document.querySelector("body");
+body.style.height = 100 + "vh";
+body.style.width = 100 + "vw";
+
+let writeSomething = (event) => {
+  let text = document.createElement("p");
+  text.innerHTML = "You Clicked";
+  event.currentTarget.appendChild(text);
+};
+
+body.addEventListener("click", writeSomething);

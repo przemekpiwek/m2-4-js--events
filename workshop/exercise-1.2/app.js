@@ -21,3 +21,30 @@
 // Stretch goal
 // Make the countdown live (show a countdown that updates several times a
 // second)
+
+let timer = 5 - parseInt(Math.random(0, 1) * 2);
+let timeText = document.querySelector("#time");
+let result = document.querySelector(".result");
+let id = setInterval(counter, 1000);
+timeText.innerText = `${timer}`;
+
+function counter() {
+  timer -= 1;
+  timeText.innerText = `${timer}`;
+  if (timer < 0) {
+    timeText.innerText = 0;
+    clearInterval(id);
+  }
+}
+
+window.addEventListener("click", haveYouClicked);
+
+function haveYouClicked() {
+  if (timer > 0) {
+    result.innerText = "you win";
+  } else {
+    result.innerText = "you lose";
+  }
+
+  window.removeEventListener("click", haveYouClicked);
+}
